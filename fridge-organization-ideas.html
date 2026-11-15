@@ -1,0 +1,551 @@
+<!--
+  =====================================================================
+  HOW TO CUSTOMIZE fridge-organization-ideas.html
+  1. Paste your Pinterest website claim tag on the marked line inside <head>.
+  2. Replace YOUR-DOMAIN and the og:image placeholder path once your domain and image are ready.
+  3. Edit the Fridge guide's title, date, image, and tips inside site-config.js (GUIDES[0]).
+  4. All shared brand text, colors, and navigation links come from site-config.js.
+  =====================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- EDIT THESE STATIC META TAGS WHEN YOU ADD YOUR DOMAIN OR IMAGE -->
+  <title>Fridge Organization Ideas to Make Room for Holiday Hosting | Smart Living Finds</title>
+  <meta name="description" content="Practical fridge organization ideas to clear shelf space, sort ready-to-eat and raw foods safely, and make room before holiday hosting." />
+  <link rel="canonical" href="https://YOUR-DOMAIN/fridge-organization-ideas.html" />
+
+  <!-- Open Graph & Pinterest Article Rich Pin Tags -->
+  <meta property="og:title" content="Fridge Organization Ideas to Make Room for Holiday Hosting" />
+  <meta property="og:description" content="Practical fridge organization ideas to clear shelf space, sort ready-to-eat and raw foods safely, and make room before holiday hosting." />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Smart Living Finds" />
+  <meta property="og:url" content="https://YOUR-DOMAIN/fridge-organization-ideas.html" />
+  <meta property="og:image" content="https://YOUR-DOMAIN/images/fridge-organization-pin.jpg" />
+  <meta property="article:published_time" content="2026-11-15T08:00:00Z" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- PASTE YOUR PINTEREST CLAIM META TAG HERE -->
+
+  <!-- Article Structured Data for Search & Rich Pins -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Fridge Organization Ideas to Make Room for Holiday Hosting",
+    "image": "https://YOUR-DOMAIN/images/fridge-organization-pin.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "Smart Living Finds"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Smart Living Finds"
+    },
+    "datePublished": "2026-11-15"
+  }
+  </script>
+
+  <!-- Google Fonts: Playfair Display for headings and Inter for body copy -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="site-config.js"></script>
+</head>
+<body>
+  <!-- SHARED NAVBAR -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html#home" class="brand-link" id="header-brand">Smart Living Finds</a>
+
+      <nav class="nav-desktop" aria-label="Primary navigation" id="nav-desktop"></nav>
+
+      <div class="header-actions">
+        <a href="https://www.pinterest.com/smartlivingfindsclub/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm header-pinterest-desktop" id="header-pinterest-btn">
+          <i class="fa-brands fa-pinterest" aria-hidden="true"></i>
+          <span>Follow on Pinterest</span>
+        </a>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Open menu">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation"></nav>
+  </header>
+
+  <main class="guide-main">
+    <div class="container">
+      <article class="guide-article">
+        <!-- BREADCRUMB -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html#home">Home</a>
+          <span aria-hidden="true">&gt;</span>
+          <a href="index.html#guides">Guides</a>
+          <span aria-hidden="true">&gt;</span>
+          <span id="breadcrumb-category">Kitchen &amp; Pantry</span>
+        </nav>
+
+        <!-- GUIDE HEADER -->
+        <header class="guide-header">
+          <div class="guide-header-meta" id="guide-meta"></div>
+          <h1 class="guide-title" id="guide-title"></h1>
+          <p class="guide-intro" id="guide-intro"></p>
+        </header>
+
+        <!-- 2:3 HERO IMAGE & SAVE TO PINTEREST -->
+        <div class="guide-hero-block">
+          <div class="guide-hero-frame" id="guide-hero-frame"></div>
+          <div class="save-pin-wrap">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="save-pinterest-btn">
+              <i class="fa-brands fa-pinterest" aria-hidden="true"></i>
+              <span>Save to Pinterest</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- QUICK ANSWER BOX -->
+        <section class="quick-answer-box is-hidden" id="quick-answer-box" aria-labelledby="quick-answer-heading">
+          <h2 class="quick-answer-label" id="quick-answer-heading">Quick Answer</h2>
+          <p id="guide-quick-answer"></p>
+        </section>
+
+        <!-- NUMBERED TIPS -->
+        <section class="tips-list" id="guide-tips" aria-label="Organizing tips"></section>
+
+        <!-- OPTIONAL CHECKLIST -->
+        <section class="guide-checklist-box is-hidden" id="guide-checklist-box" aria-labelledby="guide-checklist-heading">
+          <h2 class="quick-answer-label" id="guide-checklist-heading">Pre-Hosting Reset Checklist</h2>
+          <p style="font-size: 0.9375rem;">Check off each step as you prep your shelves.</p>
+          <ul class="checklist-items" id="guide-checklist-items"></ul>
+        </section>
+
+        <!-- FOLLOW ON PINTEREST CTA -->
+        <section class="guide-cta-box" id="guide-follow-cta">
+          <h2 style="font-size: 1.4rem; margin-bottom: 4px;">Want more calm, practical home ideas?</h2>
+          <p style="max-width: 48ch; margin-bottom: 6px;">Save our seasonal kitchen, pantry, and small-space guides straight to your boards.</p>
+          <a href="https://www.pinterest.com/smartlivingfindsclub/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="guide-follow-btn">
+            <i class="fa-brands fa-pinterest" aria-hidden="true"></i>
+            <span>Follow on Pinterest</span>
+          </a>
+        </section>
+
+        <p class="guide-illustrative-note">Images are illustrative.</p>
+      </article>
+
+      <!-- MORE GUIDES -->
+      <section class="more-guides-section" id="more-guides-section" aria-labelledby="more-guides-heading">
+        <h2 class="section-heading" id="more-guides-heading" style="margin-bottom: 24px;">More Guides</h2>
+        <div class="guides-grid" id="more-guides-grid"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- SHARED FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand" id="footer-brand">Smart Living Finds</div>
+          <p class="footer-tagline" id="footer-tagline">Smart Finds. Better Living.</p>
+        </div>
+
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links" id="footer-quick-links"></ul>
+        </div>
+
+        <div id="footer-social-col">
+          <div class="footer-heading">Follow</div>
+          <div class="social-icons" id="footer-social-icons"></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span id="footer-copyright"></span>
+        <div class="footer-legal-links">
+          <a href="index.html#privacy">Privacy</a>
+          <a href="index.html#disclosure">Disclosure</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      if (typeof SITE === "undefined") {
+        return;
+      }
+
+      function isPresent(value) {
+        return typeof value === "string" && value.trim() !== "" && value.trim().toLowerCase() !== "none";
+      }
+
+      function makeGuideSlug(title) {
+        return String(title || "guide")
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-+|-+$/g, "");
+      }
+
+      function getGuideUrl(guide) {
+        if (isPresent(guide.page)) {
+          return guide.page;
+        }
+        return "guide-template.html?guide=" + encodeURIComponent(makeGuideSlug(guide.title));
+      }
+
+      function findCurrentGuide() {
+        var guides = SITE.GUIDES || [];
+        var currentFile = window.location.pathname.split("/").pop();
+        for (var i = 0; i < guides.length; i++) {
+          if (guides[i].page === currentFile) {
+            return guides[i];
+          }
+        }
+        return guides[0] || null;
+      }
+
+      function applyTheme() {
+        var root = document.documentElement;
+        var t = SITE.theme || {};
+        if (isPresent(t.background)) root.style.setProperty("--bg", t.background);
+        if (isPresent(t.card)) root.style.setProperty("--card", t.card);
+        if (isPresent(t.accent)) root.style.setProperty("--accent", t.accent);
+        if (isPresent(t.accentHover)) root.style.setProperty("--accent-hover", t.accentHover);
+        if (isPresent(t.heading)) root.style.setProperty("--heading", t.heading);
+        if (isPresent(t.body)) root.style.setProperty("--body", t.body);
+        if (isPresent(t.muted)) root.style.setProperty("--muted", t.muted);
+        if (isPresent(t.border)) root.style.setProperty("--border", t.border);
+      }
+
+      function getCategoryDisplayName(filterKey) {
+        var categories = SITE.categories || [];
+        for (var i = 0; i < categories.length; i++) {
+          if (categories[i].filterKey === filterKey || categories[i].name === filterKey) {
+            return categories[i].name;
+          }
+        }
+        return filterKey;
+      }
+
+      function formatDate(dateStr) {
+        if (!isPresent(dateStr)) return "";
+        var parsed = new Date(dateStr + "T00:00:00");
+        if (isNaN(parsed.getTime())) return "";
+        return parsed.toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+          year: "numeric"
+        });
+      }
+
+      function createPlaceholder() {
+        var box = document.createElement("div");
+        box.className = "img-placeholder";
+        return box;
+      }
+
+      function createSafeImage(src, alt) {
+        if (!isPresent(src)) {
+          return createPlaceholder();
+        }
+        var img = document.createElement("img");
+        img.src = src;
+        img.alt = alt;
+        img.loading = "lazy";
+        img.decoding = "async";
+        img.addEventListener("error", function () {
+          var parent = img.parentElement;
+          if (parent) {
+            img.remove();
+            parent.appendChild(createPlaceholder());
+          }
+        });
+        return img;
+      }
+
+      function renderSharedHeaderAndFooter() {
+        if (isPresent(SITE.favicon)) {
+          var iconLink = document.createElement("link");
+          iconLink.rel = "icon";
+          iconLink.href = SITE.favicon;
+          document.head.appendChild(iconLink);
+        }
+
+        var brandEl = document.getElementById("header-brand");
+        if (isPresent(SITE.logo)) {
+          brandEl.innerHTML = "";
+          var logoImg = document.createElement("img");
+          logoImg.src = SITE.logo;
+          logoImg.alt = SITE.brandName;
+          logoImg.className = "brand-logo-img";
+          brandEl.appendChild(logoImg);
+        } else {
+          brandEl.textContent = SITE.brandName;
+        }
+
+        var desktopNav = document.getElementById("nav-desktop");
+        var mobileNav = document.getElementById("nav-mobile");
+        (SITE.nav || []).forEach(function (item) {
+          var href = "index.html#" + item.target;
+
+          var aDesktop = document.createElement("a");
+          aDesktop.href = href;
+          aDesktop.className = "nav-link";
+          aDesktop.textContent = item.label;
+          desktopNav.appendChild(aDesktop);
+
+          var aMobile = document.createElement("a");
+          aMobile.href = href;
+          aMobile.className = "nav-link";
+          aMobile.textContent = item.label;
+          mobileNav.appendChild(aMobile);
+        });
+
+        var pinterestUrl = SITE.social && SITE.social.pinterest;
+        var headerPinBtn = document.getElementById("header-pinterest-btn");
+        var ctaBox = document.getElementById("guide-follow-cta");
+        var followBtn = document.getElementById("guide-follow-btn");
+
+        if (isPresent(pinterestUrl)) {
+          headerPinBtn.href = pinterestUrl;
+          followBtn.href = pinterestUrl;
+
+          var mobilePinBtn = document.createElement("a");
+          mobilePinBtn.href = pinterestUrl;
+          mobilePinBtn.target = "_blank";
+          mobilePinBtn.rel = "noopener noreferrer";
+          mobilePinBtn.className = "btn btn-primary btn-sm";
+          mobilePinBtn.innerHTML = '<i class="fa-brands fa-pinterest" aria-hidden="true"></i><span>Follow on Pinterest</span>';
+          mobileNav.appendChild(mobilePinBtn);
+        } else {
+          headerPinBtn.classList.add("is-hidden");
+          ctaBox.classList.add("is-hidden");
+        }
+
+        var toggleBtn = document.getElementById("nav-toggle");
+        toggleBtn.addEventListener("click", function () {
+          var isOpen = mobileNav.classList.toggle("is-open");
+          toggleBtn.setAttribute("aria-expanded", String(isOpen));
+          toggleBtn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+        });
+
+        document.getElementById("footer-brand").textContent = SITE.brandName;
+        document.getElementById("footer-tagline").textContent = SITE.tagline;
+
+        var quickLinks = document.getElementById("footer-quick-links");
+        (SITE.nav || []).forEach(function (item) {
+          var li = document.createElement("li");
+          var a = document.createElement("a");
+          a.href = "index.html#" + item.target;
+          a.textContent = item.label;
+          li.appendChild(a);
+          quickLinks.appendChild(li);
+        });
+
+        var socialWrap = document.getElementById("footer-social-icons");
+        var socialCol = document.getElementById("footer-social-col");
+        var socialConfig = [
+          { key: "pinterest", label: "Pinterest", icon: "fa-brands fa-pinterest" },
+          { key: "instagram", label: "Instagram", icon: "fa-brands fa-instagram" },
+          { key: "youtube", label: "YouTube", icon: "fa-brands fa-youtube" },
+          { key: "email", label: "Email", icon: "fa-regular fa-envelope", isEmail: true }
+        ];
+
+        var addedSocial = 0;
+        socialConfig.forEach(function (item) {
+          var val = SITE.social && SITE.social[item.key];
+          if (!isPresent(val)) return;
+          var a = document.createElement("a");
+          a.href = item.isEmail ? "mailto:" + val : val;
+          if (!item.isEmail) {
+            a.target = "_blank";
+            a.rel = "noopener noreferrer";
+          }
+          a.className = "social-icon-link";
+          a.setAttribute("aria-label", item.label);
+          a.innerHTML = '<i class="' + item.icon + '" aria-hidden="true"></i>';
+          socialWrap.appendChild(a);
+          addedSocial++;
+        });
+
+        if (addedSocial === 0) {
+          socialCol.classList.add("is-hidden");
+        }
+
+        var year = new Date().getFullYear();
+        document.getElementById("footer-copyright").textContent =
+          "© " + year + " " + SITE.brandName + ". All rights reserved.";
+      }
+
+      function renderGuideContent(GUIDE) {
+        if (!GUIDE) return;
+
+        var categoryName = getCategoryDisplayName(GUIDE.category);
+        var formattedDate = formatDate(GUIDE.date);
+        var introText = isPresent(GUIDE.intro) ? GUIDE.intro : GUIDE.shortText;
+
+        document.title = GUIDE.title + " | " + SITE.brandName;
+        document.getElementById("breadcrumb-category").textContent = categoryName;
+        document.getElementById("guide-meta").textContent = formattedDate
+          ? categoryName + " · " + formattedDate
+          : categoryName;
+
+        document.getElementById("guide-title").textContent = GUIDE.title;
+        document.getElementById("guide-intro").textContent = introText || "";
+
+        if (isPresent(GUIDE.quickAnswer)) {
+          document.getElementById("quick-answer-box").classList.remove("is-hidden");
+          document.getElementById("guide-quick-answer").textContent = GUIDE.quickAnswer;
+        }
+
+        var heroFrame = document.getElementById("guide-hero-frame");
+        heroFrame.appendChild(createSafeImage(GUIDE.image, GUIDE.imageAlt || GUIDE.title));
+
+        var mediaUrl = "";
+        if (isPresent(GUIDE.image)) {
+          try {
+            mediaUrl = new URL(GUIDE.image, window.location.href).href;
+          } catch (e) {
+            mediaUrl = GUIDE.image;
+          }
+          var ogImg = document.querySelector('meta[property="og:image"]');
+          if (ogImg) ogImg.setAttribute("content", mediaUrl);
+        } else {
+          var ogImgMeta = document.querySelector('meta[property="og:image"]');
+          mediaUrl = ogImgMeta ? ogImgMeta.getAttribute("content") || "" : "";
+        }
+
+        if (isPresent(GUIDE.date)) {
+          var pubMeta = document.querySelector('meta[property="article:published_time"]');
+          if (pubMeta) pubMeta.setAttribute("content", GUIDE.date + "T08:00:00Z");
+        }
+
+        var saveBtn = document.getElementById("save-pinterest-btn");
+        var pinParams =
+          "?url=" + encodeURIComponent(window.location.href) +
+          "&media=" + encodeURIComponent(mediaUrl) +
+          "&description=" + encodeURIComponent(GUIDE.title);
+        saveBtn.href = "https://www.pinterest.com/pin/create/button/" + pinParams;
+
+        var tipsWrap = document.getElementById("guide-tips");
+        (GUIDE.tips || []).forEach(function (tip) {
+          var sec = document.createElement("section");
+          sec.className = "tip-section";
+          var h2 = document.createElement("h2");
+          h2.className = "tip-heading";
+          h2.textContent = tip.heading;
+          var p = document.createElement("p");
+          p.textContent = tip.text;
+          sec.appendChild(h2);
+          sec.appendChild(p);
+          tipsWrap.appendChild(sec);
+        });
+
+        var checklist = GUIDE.checklist || [];
+        if (checklist.length > 0) {
+          var box = document.getElementById("guide-checklist-box");
+          var listEl = document.getElementById("guide-checklist-items");
+          box.classList.remove("is-hidden");
+
+          checklist.forEach(function (itemText, idx) {
+            var li = document.createElement("li");
+            var label = document.createElement("label");
+            label.className = "checklist-label";
+            var cb = document.createElement("input");
+            cb.type = "checkbox";
+            cb.id = "check-item-" + idx;
+            var span = document.createElement("span");
+            span.textContent = itemText;
+            label.appendChild(cb);
+            label.appendChild(span);
+            li.appendChild(label);
+            listEl.appendChild(li);
+          });
+        }
+      }
+
+      function renderMoreGuides(currentGuide) {
+        var grid = document.getElementById("more-guides-grid");
+        var section = document.getElementById("more-guides-section");
+        var guides = (SITE.GUIDES || []).filter(function (g) {
+          return g.published !== false && (!currentGuide || g.title !== currentGuide.title);
+        }).sort(function (a, b) {
+          var da = isPresent(a.date) ? Date.parse(a.date + "T00:00:00") : 0;
+          var db = isPresent(b.date) ? Date.parse(b.date + "T00:00:00") : 0;
+          return (isNaN(db) ? 0 : db) - (isNaN(da) ? 0 : da);
+        }).slice(0, 3);
+
+        if (guides.length === 0) {
+          section.classList.add("is-hidden");
+          return;
+        }
+
+        guides.forEach(function (guide) {
+          var guideUrl = getGuideUrl(guide);
+          var card = document.createElement("article");
+          card.className = "guide-card";
+
+          var mediaLink = document.createElement("a");
+          mediaLink.href = guideUrl;
+          mediaLink.className = "guide-card-media";
+          mediaLink.setAttribute("aria-label", guide.title);
+          mediaLink.appendChild(createSafeImage(guide.image, guide.imageAlt || guide.title));
+
+          var body = document.createElement("div");
+          body.className = "guide-card-body";
+
+          var meta = document.createElement("div");
+          meta.className = "guide-meta";
+          var formattedDate = formatDate(guide.date);
+          meta.textContent = formattedDate
+            ? getCategoryDisplayName(guide.category) + " · " + formattedDate
+            : getCategoryDisplayName(guide.category);
+
+          var h3 = document.createElement("h3");
+          h3.className = "guide-card-title";
+          var titleLink = document.createElement("a");
+          titleLink.href = guideUrl;
+          titleLink.textContent = guide.title;
+          h3.appendChild(titleLink);
+
+          var excerpt = document.createElement("p");
+          excerpt.className = "guide-card-excerpt";
+          excerpt.textContent = guide.shortText;
+
+          var readLink = document.createElement("a");
+          readLink.href = guideUrl;
+          readLink.className = "guide-card-link";
+          readLink.innerHTML = '<span>Read Guide</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>';
+
+          body.appendChild(meta);
+          body.appendChild(h3);
+          body.appendChild(excerpt);
+          body.appendChild(readLink);
+
+          card.appendChild(mediaLink);
+          card.appendChild(body);
+          grid.appendChild(card);
+        });
+      }
+
+      var currentGuide = findCurrentGuide();
+      applyTheme();
+      renderSharedHeaderAndFooter();
+      renderGuideContent(currentGuide);
+      renderMoreGuides(currentGuide);
+    })();
+  </script>
+</body>
+</html>

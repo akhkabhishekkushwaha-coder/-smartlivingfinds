@@ -1,0 +1,6 @@
+{
+  "name": "Smart Living Finds",
+  "description": "Practical, minimalist home organization ideas for the kitchen, pantry, bathroom, and small spaces.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
